@@ -28,6 +28,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 - [ ] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
 - [ ] What is your favorite state management system you've learned and this sprint? Please explain why!
 
+
 ## Project Set Up
 
 Follow these steps to set up your project:
