@@ -1,11 +1,12 @@
 import React from 'react';
 
-const Smurf = () => {
+const Smurf = props => {
+  console.log('Smurf Props', props)
   return (
     <div className='smurf-card'>
-      <h3>Name:</h3>
-      <strong>Height: tall</strong>
-      <p>Age: smurf years old</p>
+      <h3>Name: {props.name}</h3>
+      <strong>Height: {props.height} tall</strong>
+      <p>Age: {props.age} smurf years old</p>
     </div>
   );
 };
