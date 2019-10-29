@@ -33,6 +33,7 @@ export function reducer(state = initialState, action) {
         ...state,
         addingSmurfs: true
       };
+      
 
     default:
       return state;

@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux'; 
 
 const Smurf = props => {
   console.log('Smurf Props', props)
@@ -11,4 +12,4 @@ const Smurf = props => {
   );
 };
 
-export default Smurf;
+export default connect()(Smurf);

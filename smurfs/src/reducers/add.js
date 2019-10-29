@@ -1,1 +1,5 @@
-import { ADD_SMURF }
+import { ADD_SMURF, UPDATE_SMURF } from '../actions/add';
+
+const initialState = {
+  
+}

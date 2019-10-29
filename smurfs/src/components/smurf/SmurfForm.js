@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, } from 'react';
 import axios from 'axios';
 
 const SmurfForm = () => {
   const [newSmurf, setNewSmurf] = useState([])
-
     axios
-    .post('http://localhost:3333/smurfs')
+    .post('http://localhost:3333/smurfs', payload)
     .then(res => {
-      console.log('res in post', res)
+      setNewSmurf(res.data)
     })
     .catch(err => {
       console.log('Error Loading...', err)

@@ -8,8 +8,8 @@ import Smurfs from './smurf/Smurfs';
 
 import "./App.css";
 
-const App = () =>  {
-  
+const App = props =>  {
+
   useEffect(() => {
     props.fetchSmurfs();
   }, []);

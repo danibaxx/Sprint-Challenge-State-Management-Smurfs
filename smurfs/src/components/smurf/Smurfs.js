@@ -5,6 +5,7 @@ import Smurf from './Smurf';
 
 const Smurfs = () => {
   const [smurfList] = useState([]);
+  console.log("Smurf List", smurfList)
   return (
     <div className='smurfs'>
       <ul>
