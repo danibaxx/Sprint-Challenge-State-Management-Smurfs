@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 
-import Smurf from './Smurf';
-
 const Smurfs = () => {
   const [smurfList] = useState([]);
   console.log("Smurf List", smurfList)
@@ -10,20 +8,15 @@ const Smurfs = () => {
     <div className='smurfs'>
       <ul>
         {smurfList.map(smurf => (
-          <Smurf 
-            key={smurf.id}
-            name={smurf.name}
-            id={smurf.id}
-            age={smurf.age}
-            height={smurf.height}
-          />
+          <div className='smurf-card'>
+            <h3>Name: {smurf.name}</h3>
+            <strong>Height: {smurf.height} tall</strong>
+            <p>Age: {smurf.age} smurf years old</p>
+          </div>
         ))}
       </ul>
     </div>
-  );
+  )
 };
 
-export default connect(
-  null,
-  {}
-)(Smurfs);
+export default connect()(Smurfs);

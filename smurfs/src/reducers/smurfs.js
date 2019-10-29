@@ -5,9 +5,13 @@ import {
 } from '../actions/fetch';
 
 const initialState = {
-  smurfs: [],
-  fetchingSmurfs: false,
-  addingSmurfs: false,
+  smurfs: {
+    name: '',
+    age: '',
+    height: ''
+  },
+  fetchSmurfs: false,
+  addSmurfs: false,
   error: null
 };
 
@@ -16,22 +20,23 @@ export function reducer(state = initialState, action) {
     case FETCH_SMURF_START: 
       return {
         ...state,
-        fetchingSmurfs: true
+        fetchSmurfs: true
       };
 
     case FETCH_SMURF_SUCCESS:
       return {
         ...state,
         smurfs: [
-          ...state.smurfs, ...action.payload
+          ...state.smurfs, 
+          ...action.payload
         ],
-        fetchingSmurfs: false
+        fetchSmurfs: false
       };
 
     case FETCH_SMURF_FAILURE:
       return {
         ...state,
-        addingSmurfs: true
+        addSmurfs: true
       };
       
 

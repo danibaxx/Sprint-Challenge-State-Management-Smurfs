@@ -8,7 +8,7 @@ import Smurfs from './smurf/Smurfs';
 
 import "./App.css";
 
-const App = props =>  {
+function App(props) {
 
   useEffect(() => {
     props.fetchSmurfs();
@@ -24,9 +24,11 @@ const App = props =>  {
   );
 }
 
-const mapStateToProps = () => {
+const mapStateToProps = (state) => {
   return {
-    // add state here
+    // fetchSmurfs: state.smurf.fetchSmurfs,
+    // smurf: state.smurf.smurf,
+    // smurfError: state.smurf.error
   }
 }
 

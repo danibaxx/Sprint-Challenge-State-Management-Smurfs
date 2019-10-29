@@ -7,7 +7,7 @@ import {
 } from 'redux';
 import { Provider } from 'react-redux';
 import { reducer as smurfsReducer } from './reducers/smurfs';
-import { reducer as addReducer } from './reducers/add';
+// import { reducer as addReducer } from './reducers/add';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 
@@ -16,7 +16,7 @@ import App from "./components/App";
 
 const rootReducer = combineReducers({
   smurfs: smurfsReducer,
-  add: addReducer
+  // add: addReducer
 });
 
 const store = createStore(

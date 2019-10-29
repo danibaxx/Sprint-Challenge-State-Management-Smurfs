@@ -3,13 +3,15 @@ import axios from 'axios';
 
 const SmurfForm = () => {
   const [newSmurf, setNewSmurf] = useState([])
+  
     axios
-    .post('http://localhost:3333/smurfs', payload)
+    .post('http://localhost:3333/smurfs')
     .then(res => {
       setNewSmurf(res.data)
+      console.log('new smurf', res.data)
     })
     .catch(err => {
-      console.log('Error Loading...', err)
+      console.log('Error Loading...', err.res)
     })
 
   return (
@@ -35,5 +37,11 @@ const SmurfForm = () => {
     </div>
   );
 };
+
+function mapStateToProps(store) {
+  return {
+    
+  }
+}
 
 export default SmurfForm;
