@@ -1,15 +1,14 @@
-import React from 'react';
-// import { SmurfContext } from '../context/SmurfContext';
+import React, { useState } from 'react';
+import { connect } from 'react-redux';
 
 import Smurf from './Smurf';
 
 const Smurfs = () => {
-  // const smurfs = useContext(SmurfContext);
+  const [smurfList] = useState([]);
   return (
     <div className='smurfs'>
-      <h1>Smurf Village</h1>
       <ul>
-        {props.smurfs.map(smurf => (
+        {smurfList.map(smurf => (
           <Smurf 
             key={smurf.id}
             name={smurf.name}
@@ -23,4 +22,7 @@ const Smurfs = () => {
   );
 };
 
-export default Smurfs;
+export default connect(
+  null,
+  {}
+)(Smurfs);
