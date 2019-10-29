@@ -14,6 +14,7 @@ function App(props) {
     props.fetchSmurfs();
   }, []);
 
+  asdfasdf
   return(
     <div>
       <h1>Smurf Village</h1>
